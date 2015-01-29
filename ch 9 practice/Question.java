@@ -1,40 +1,53 @@
-
-
 /**
- * Write a description of class Question here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+   A question with a text and an answer.
+*/
 public class Question
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+   private String text;
+   private String answer;
 
-    /**
-     * Default constructor for objects of class Question
-     */
-    public Question()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+   /**
+      Constructs a question with empty question and answer.
+   */
+   public Question() 
+   {
+      text = "";
+      answer = "";
+   }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
+   /**
+      Sets the question text.
+      @param questionText the text of this question
+   */
+   public void setText(String questionText)   
+   {
+      text = questionText;
+   }
 
+   /**
+      Sets the answer for this question.
+      @param correctResponse the answer
+   */
+   public void setAnswer(String correctResponse)
+   {
+      answer = correctResponse;
+   }
+
+   /**
+      Checks a given response for correctness.
+      @param response the response to check
+      @return true if the response was correct, false otherwise
+   */
+   public boolean checkAnswer(String response)
+   {
+      return response.equals(answer);
+   }
+
+   /**
+      Displays this question.
+   */
+   public void display()
+   {
+      System.out.println(text);
+   }
 }
