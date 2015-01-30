@@ -18,4 +18,9 @@ public class BillFold {
     public String formatCards() {
         return "[" + card1.format() + "|" + card2.format() + "]";
     }
+    
+    public int getExpiredCardCount()
+    {
+        
+    }
 }
