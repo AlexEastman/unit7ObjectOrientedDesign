@@ -1,3 +1,4 @@
+
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -8,7 +9,7 @@ public class Shuffler {
 	 * to each sorting procedure.
 	 */
 	private static final int SHUFFLE_COUNT = 1;
-
+	
 
 	/**
 	 * Tests shuffling methods.
@@ -50,7 +51,7 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		
 	}
 
 	/**
@@ -65,6 +66,13 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		for (int k = values.length - 1; k > 0; k--) {
+			int numCards = k + 1;
+			int start = 0;
+			int randSpot = (int) (Math.random() * numCards) + start;
+			int temp = values[k];
+			
+		}
+
 	}
 }
